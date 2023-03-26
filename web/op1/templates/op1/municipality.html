@@ -1,0 +1,26 @@
+
+
+{% extends 'nav.html' %}
+{% load static %}
+        {% block contain %}
+        <link rel="stylesheet" href="{% static 'style/boxxx.css'%}">
+        <center><h3 class="titre">municiplitys</h3 ></center>
+
+        <div class="container">
+        {% for mun in muns %}
+            <a href="{% url 'municiplity_info' mun.slugy%}">
+                <div class="box">
+                    <p class="mun" ><img src="{% static 'images/city-hall.png'%}" class="">  {{mun}} </p>   
+                    <p class="zone" ><img src="{% static 'images/location.png'%}" >   {{mun.zone}}</p>
+                    <p class="zone" ><img src="{% static 'images/request.png'%}" >   15</p>
+                    <p><img src="{% static 'images/job-seeking.png'%}" class="desc" ></p>
+                    <p class="par">{{mun.decrisption}}</p>
+                   
+
+
+                </div>
+            </a>
+        
+        {% endfor %}
+        </div>
+        {% endblock %}

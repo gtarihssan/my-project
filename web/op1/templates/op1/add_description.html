@@ -1,0 +1,24 @@
+
+{% extends 'nav.html' %}
+
+{% load static %}
+
+{% block contain %}
+
+       <link rel="stylesheet" href="{% static 'style/add_mun.css' %}">
+        </style>
+
+        
+        <form action="{% url 'add_decribe' mun.slugy%}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+
+
+            <center>
+            <div class="containn">
+                    {{dform}}
+                <input type="submit" value="add" class="submit_btn">
+                <div>
+            </center>
+
+{% endblock %}

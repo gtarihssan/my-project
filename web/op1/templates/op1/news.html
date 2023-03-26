@@ -1,0 +1,49 @@
+
+{% extends 'nav.html' %}
+{% load static %}
+
+
+
+        {% block contain %}
+        <script src="{% static 'edits/jquery-3.6.3.min.js' %}" ></script>
+        <link rel="stylesheet" href="{% static 'style/newsss.css'%}">
+
+        <div class="cont">       
+            
+<!--start-->{% for dec in decs %}
+                    <!-- =================the whole container of the image, text, and title of the description================ -->
+                    <div class="decn"  >
+
+                    <!-- =================the button which you can delete the description, this action will be accesible only for admins============= -->
+                    {% if user.is_superuser or user.client == dec.client %}  
+                        <div class="xicon">
+                                <button type=""  name="btn" id="{{dec.slugy}}delete" value="{{dec.slugy}}delete">
+                                    <img src="{% static 'images/xicon.png'%}">
+                                </button>
+                        </div>
+                    {% endif %}
+                    <!-- ================== the description of the post======================================== -->
+                        <p class="text" id="{{dec.slugy}}text" >
+                            {{dec.text}}
+                        </p>
+                    
+                        <!-- =============== the box that containe the image, the title and the verification buttons of deletetion -->
+                                    <div class="image" id="{{dec.slugy}}image" >
+
+                                        <p>{{dec.titre}}</p> 
+                                    <!-- ======= image ==============-->
+                                        {% if dec.pic %}
+                                            <img  src="{{dec.pic.url}}" alt="" id="{{dec.slugy}}img" class="imaa">  
+                                        {% endif %} 
+                                        <img src="{% static 'images/cancel.png' %}" class="ico" >
+                                        <img src="{% static 'images/correct.png' %}" class="ico">
+
+                                    </div>
+
+                    </div>
+<!-- end -->{% endfor %}
+        </div>
+
+        <script type="text/javascript" src="{% static 'edits/newss.js' %}" ></script>
+        {% endblock %}
+

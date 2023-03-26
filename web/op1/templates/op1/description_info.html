@@ -1,0 +1,49 @@
+{% extends 'nav.html' %}
+{% load static %}
+
+{% block contain %}
+<link rel="stylesheet" href="{% static 'style/decsss.css'%}">
+    <div class="des">
+        <p class="munci" ><img src="{% static 'images/city-hall.png'%}" class="mun_icon">   {{mun}}</p>
+        <p class="titre">{{dec.titre}}</p>
+        <p class="client" >De <a href=""><b>{{cli.user.first_name}} {{cli.user.last_name}}</b></a> publier le <b class="date">{{dec.date}}</b></p>
+        <p class="text">{{dec.text}}</p>
+
+        
+        
+        <div class="content">
+            
+                {%if dec.pic %}
+                <img src="{{dec.pic.url}}" class="image">
+                {% endif %}
+                <div class="right">
+                        <div class="comment">
+                            {% for comm in com %}
+
+                                <div class="single_comment">
+                                    {% if comm.client.pic %}
+                                        <img src="{{comm.client.pic.url}}" class="client_pic">
+                                    {% endif %}
+                                    <div class="comment_and_name">    
+                                        <p class="client_name"><span>{{comm.client.user.first_name}}  {{comm.client.user.last_name}}</span></p>
+                                        <p class="comm" ><span>{{comm}}</span></p>
+                                    </div>
+                                </div>
+
+                            {% endfor %} 
+                            
+                        </div>
+                    {% csrf_token %}
+                    <input type="hidden" id="describe" value="{{dec.slugy}}">
+                    <input type="textarea" name="comar" placeholder="your comment ..." class="comment_area" id="comar" onsubmit="comment_meca()" >
+                </div>
+            
+                
+                    
+        </div>
+
+    </div>    
+<script src="{% static 'edits/comment.js' %}"></script>
+<script src="{% static 'edits/jquery-3.6.3.min.js' %}"></script>
+
+{% endblock %}

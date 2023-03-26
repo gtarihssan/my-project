@@ -1,0 +1,166 @@
+.des{
+    justify-content: center;
+    text-align: center;
+}
+
+.des .munci {
+    font-weight: 600;
+    text-align: center;
+}
+
+.des .munci .mun_icon{
+    height: 20px;
+    width: 20px;
+    
+    
+}
+
+.des .titre {
+    font-size: 20px;
+    font-weight: 700;
+    
+}
+
+
+
+.des .client{
+    text-align: left;
+    margin-left: 20px;
+}
+
+.des b{
+    font-weight: 600;  
+}
+
+.des a{
+    text-decoration: none;
+    color: black;
+    cursor:pointer;
+}
+
+.des .text{
+    font-size: 20px;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+    text-align: left;
+}
+
+
+.des .content{
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+}
+
+
+
+
+.des .image{
+
+    opacity: 1;
+    width: 600px;
+    height: 450px;
+    justify-content: center;
+    margin: 30px;
+    
+
+}
+
+
+
+.des .comment{
+    height: 350px;
+    display: none;
+    max-height: 550px;
+    overflow-y:scroll;
+    width: 600px;
+    margin: 10px;
+    margin-left: 20px;
+    padding: 20px;
+    padding-left: 20px;
+    border-color: black;
+    border-width: 0.1px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+
+
+
+.des  .comment_area{
+    
+    height: auto;
+    width: 500px;
+    height: 30px;
+    font-size: 14px;
+    border: solid;
+    border-width: 0.05px;
+    padding: 10px;
+    padding-left: 20px;
+    background-color: rgba(255, 255, 255, 1 );
+    margin-bottom: 50px;
+    margin-left: 0px;
+    border-radius: 50px;
+  
+}
+
+
+.des .comment .single_comment{
+
+    margin: 10px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 60px auto;
+    background-color: gray;
+    border-radius: 25px 50px;
+    
+}
+
+
+.des .comment .single_comment img{
+    width: 30px;
+    height: 30px;
+    margin-left: 2px;
+    border-radius: 50%;
+}
+
+.des .comment .single_comment .comment_and_name {
+    grid-column-start: 2;
+    display: grid;
+    grid-template-rows: 30px auto;
+    margin-right: 0px;
+    width: auto;
+}
+
+.des .comment .single_comment .comment_and_name .client_name{
+    margin: 0;
+    margin-top: 0px;
+    width: 200px;
+    min-width: 100px;
+}
+
+.des .comment .single_comment .comment_and_name .client_name span{
+    float: left;
+    padding-left: 5px;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+}
+
+
+.des .comment .single_comment .comment_and_name .comm{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    max-width: 600px;
+    min-width: auto;
+    
+
+}
+
+.des .comment .single_comment .comment_and_name .comm span{
+    padding-left: 5px;
+    float: left;
+    text-align: left;
+    
+}
+

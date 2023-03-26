@@ -1,0 +1,149 @@
+body{
+    background-image: url('back.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+ 
+}
+
+.all{
+   
+    display: grid;
+    grid-template-rows:100px auto 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    font-family: system-ui;
+
+}
+
+.header{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 25% 40% 35%;
+    
+    
+}
+
+.logo{
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+}
+
+.logo img {
+    height:70px;
+    opacity: 80%;
+}
+
+.title{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.header .user p{
+    font-size: 20px;
+  
+}
+
+.header .user{
+
+}
+
+.header .user a{
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.header .title{
+    font-size: 20px;
+}
+
+.contains{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    
+    
+
+}
+
+.about{
+    background-color: rgb(238, 223, 223);
+    opacity: 75%;
+    border-radius: 3%;
+    text-align: center;
+    border: solid;
+    border-width: 1px;
+}
+
+.navbar{
+    background-color: #d14734;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 5%;
+    
+ 
+
+
+}
+
+.navbar .h4 {
+    color: white;
+
+}
+
+.navbar a{
+    color : #CCD6FB;
+    text-decoration: none;
+    padding-bottom: 220px;
+    text-align: center;
+   
+    
+}
+
+
+.navbar h3:hover{
+    font-size: 130%;
+    color: #6C8FB5;
+    cursor: pointer;
+}
+
+
+.background-image{
+    height: 100px;
+    width: 1350px;
+    transition:90px;
+}
+
+.contain{
+    background-color: aqua;
+}
+
+
+.graphs{
+    display: grid;
+    grid-template-columns: 500px 500px 500px;
+    grid-row-start:2 ;
+  }
+
+  .mychart1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: 400px;
+    width: 300px;
+  }
+  .mychart2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    height: 400px;
+    width: 300px;
+  }
+  .mychart3{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    height: 400px;
+    width: 300px;
+  } 
+

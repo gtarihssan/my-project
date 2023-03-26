@@ -1,0 +1,24 @@
+{% extends 'nav.html' %}
+{% load static %}
+
+{% block contain %}
+<link rel="stylesheet" href="{% static 'style/profil.css'%}">
+<script src="{% static 'edits/jquery-3.6.3.min.js' %}" ></script>
+<div class="pro">
+    
+    <div class="client_info">
+        <p class="client_name">first name :  {{client.user.first_name}}</p>
+        <p class="client_name">last name  : {{client.user.last_name}}</p>
+        <p class="client_mail" >mail      : {{client.mail}}</p>
+    </div>
+    {% if client.pic %}
+        <div class="image">
+            <img src="{{client.pic.url}}" class="client_pic">
+        </div>
+    {% endif %}
+    <div class="action">
+        actions
+    </div>
+</div>
+<script src="{% static 'edits/try.js' %}" ></script>
+{% endblock %}

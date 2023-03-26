@@ -1,0 +1,15 @@
+{% extends 'nav.html' %}
+{% load static %}
+
+{% block contain %}
+<link rel="stylesheet" href="{% static 'style/createmunn.css'%}">
+<div class="into">
+    <form action="{% url 'create_municipality'%}" method="POST">
+        {% csrf_token %}
+        {{munForm.as_p}}
+        <input type="submit" class="btn" value="Post">
+        <input type="reset" class="btn" value="canncel">
+    </form>
+</div>
+
+{% endblock %}

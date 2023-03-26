@@ -1,0 +1,22 @@
+
+{% extends 'nav.html' %}
+{% load static %}
+
+    {% block contain %}
+    <script src="{% static 'edits/jquery-3.6.3.min.js' %}" ></script>
+    <link rel="stylesheet" href="{% static 'style/home.css' %}">
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="infoo"> 
+        <script>
+            $(document).ready(function(){
+                $('.infoo').css({opacity:0 , transition:"4s"})
+            });
+        </script>
+        <p class="message">{{message}} {{user.first_name}} {{user.last_name}}</p>
+    </div>
+    {% endfor%}
+    {% endif %}
+
+    {% endblock %}

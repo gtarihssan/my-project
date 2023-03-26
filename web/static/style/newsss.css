@@ -1,0 +1,147 @@
+.cont{
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    padding: 3px;
+    display: flex;
+    gap: 30px;
+    margin: 20px;
+    margin-top: 90px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.decn{
+    width: 90%;
+    height: 320px;
+    text-align: center;
+    border-radius:2%;
+    position: relative;
+    text-align: center;
+    background-color: rgb(175, 164, 206 , 0.3);      
+}
+
+.decn .text{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    text-align: center;
+    opacity: 0%;
+}
+
+.decn .xicon button{
+    float: right;
+    width: 35px;
+    height: 35px;
+    margin: 15px;
+    position: relative;
+    background-color: transparent;
+    border: 0;
+    
+}
+
+
+
+.decn .xicon button img{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.decn .xicon button:hover{
+    transform: scale(1.07);
+    transition: 0.5s;
+}
+
+.decn .image{
+    width: 400px;
+    height: 310px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(175, 164, 206);
+    opacity: 100%;
+    border-radius: 3%;
+    transition: 1.4s;
+}
+
+.decn .image p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: black;
+}
+
+.decn .image .imaa{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 310px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    opacity: 0;
+    transition: opacity 5s;
+
+
+}
+
+.decn:hover .image .imaa{
+    opacity: 100%;
+    border-radius: 3%;
+}
+
+.decn:hover .text{
+    opacity: 100%;
+    left: 70%;
+    transition: 2s;
+}
+
+.decn:hover  .image{
+    left: 30%;
+    transition: 2s;
+
+}
+
+.decn:hover{
+    background-color: rgb(175, 164, 206 , 0.75);
+    transition: 2s;
+}
+
+/* ----------- for delete description (div bot) --------- */
+
+.decn  .image .bot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.decn .image img:not(.imaa){
+    margin-top: 180px;
+    opacity: 0;
+    height: 50px;
+    width: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+
+
+
+
+
+
+
+
+    

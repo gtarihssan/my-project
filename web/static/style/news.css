@@ -1,0 +1,38 @@
+.cont{
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    padding: 30px;
+    display: flex;
+    gap: 300px;
+    margin: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.decn{
+    width: 800px;
+    height: 400px;
+    border: solid;
+    text-align: center;
+    border-radius: 50%;
+    background-color: black;
+
+}
+
+.decn img{
+    width: 400px;
+    height: 200px;
+    
+}
+
+.decn:hover{
+    width: 400px;
+    height: 400px;
+    border: solid;
+    text-align: center;
+    background-color: rgb(178, 216, 216);
+}
+
+
+    

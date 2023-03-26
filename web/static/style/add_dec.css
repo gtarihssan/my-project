@@ -1,0 +1,43 @@
+
+
+.cont{
+    padding-left: 200px;
+    padding-top: 50px;
+}
+.cont p label{
+    font-weight: 500;
+}
+
+
+.describe_titre{
+    width: 400px;
+    height: 20px;
+}
+
+
+.describe_text{
+    width: 500px;
+    height: 200px;
+    padding: 15px;
+    font-size: larger;
+    font-weight: 200;
+    overflow-y: scroll;
+}
+
+
+button{
+    margin-left: 130px;
+    width: 200px;
+    padding: 3px;
+    border-radius: 50px;
+    border-width: 0.05cm;
+    border-color: gray;
+}
+
+button:hover{
+
+    transform: scale(1.02);
+    z-index: 1;
+    transition: 1s;
+
+}

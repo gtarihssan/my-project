@@ -1,0 +1,36 @@
+body{
+    
+    background-size:150%;
+    background-position-x:10%;
+    background-position-y:40%;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+table{
+    margin-top: 40px;
+}
+
+.from-group input {
+    background-color: black;
+    padding: 100px;
+    
+}
+
+.message{
+    padding: 13px;
+    font-weight: 400;
+    font-size: medium;
+    color: black;
+    background-color: rgba(247, 99, 99, 0.8);
+    border-radius: 9px;
+}
+
+
+

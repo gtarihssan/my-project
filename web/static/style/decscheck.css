@@ -1,0 +1,106 @@
+
+.containee {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 50px;
+}
+
+
+.containee .dec_to_visit{   
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.containee .dec_to_visit .p1 {
+    text-align: center;
+    font-weight: 600;
+}
+
+.containee .dec_to_visit .date{
+    font-weight: 400;
+    font-size: medium;
+}
+
+
+.containee .dec_to_visit .p4{
+    border: solid;
+    border-color: gray;
+    overflow-y: scroll;
+    height: 150px;
+}
+
+.containee .dec_to_visit .p2{
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.containee .decs {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: grid;
+    grid-template-columns: 200px 200px 30px 30px 30px ;
+    margin-left: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    gap: 20px;
+    height: 400px;
+    overflow-y: scroll;
+    width: 700px;
+
+}
+
+
+.containee .decs p{
+    border: solid;
+    height: 30px;
+    
+}
+
+
+.containee .decs .dec_client{
+    width: 200px;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 3px;
+
+}
+
+
+.containee .decs .dec_titre{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: center;
+    padding: 3px;
+    min-width: 200px;
+    overflow-x:auto;
+    overflow-y: auto;
+
+
+}
+
+
+.containee .decs img{
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.containee .decs .visit{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.containee .decs .post{
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+.containee .decs .delete{
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+
+

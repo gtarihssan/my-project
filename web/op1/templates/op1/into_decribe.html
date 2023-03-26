@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form action="{% url 'delete_decribe_checked' dec.slugy%}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div>
+                <h4>{{dec.client.user.first_name}} {{dec.client.user.last_name}}</h4> <br><br><hr>
+                <h5>{{dec.municipality}}</h5>
+                <h5>titre : {{dec.titre}}</h5><br><br>
+                <h5>decribe :</h5><br>
+                {{dec.text}}
+                <br><hr>
+                {% if dec.pic %}
+                <img src="{{dec.pic.url}}" height="100px" width="100px" >
+                {% endif %}
+                <br><br><hr>
+                <input type="button" onclick="javascript:history.back()" value="canncel"> 
+                <a href="{% url 'post_decribe' dec.slugy %}"><input type="button" value="post"></a> 
+                <input type="submit" value="delete">
+            </div>
+        </form>
+    </body>
+</html>

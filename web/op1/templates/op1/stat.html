@@ -1,0 +1,106 @@
+
+{% extends 'nav.html' %}
+{% load static %}
+
+  {% block contain %}
+  <link rel="stylesheet" href="{% static 'style/graphs.css'%}">
+<div class="graphs">
+ 
+
+
+      <div class="mychart1">
+        <canvas id="myChart1"></canvas>
+      </div>
+
+      <div class="mychart2">
+        <canvas id="myChart2"></canvas>
+      </div>
+
+      <div class="mychart3">
+        <canvas id="myChart3"></canvas>
+      </div>
+  
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+    <script>
+      const ctx = document.getElementById('myChart1');
+    
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['planification' , 'gouvernance' , 'financement'],
+          datasets: [{
+            
+            data: {{data}},
+            backgroundColor : ['#cde8f6', '#d195f9' , '#0033c7'],
+            borderWidth: 1
+        
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+<script>
+  const ctxx = document.getElementById('myChart2');
+
+  new Chart(ctxx, {
+    type: 'pie',
+    data: {
+      labels: ['planification' , 'gouvernance' , 'financement'],
+      datasets: [{
+        
+        data: {{data}},
+        backgroundColor : ['#cde8f6', '#d195f9' , '#0033c7'],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+      <script>
+        const ctxxx = document.getElementById('myChart3');
+      
+        new Chart(ctxxx, {
+          type: 'line',
+          data: {
+            labels: ['planification' , 'gouvernance' , 'financement'],
+            datasets: [{
+              
+              data: {{data}},
+              backgroundColor : ['#cde8f6', '#d195f9' , '#0033c7'],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+    </div>
+  {% endblock %}
+</body>
+</html>

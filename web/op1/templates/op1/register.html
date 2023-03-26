@@ -1,0 +1,59 @@
+<html>
+
+{% load static %}
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <style>
+            .form-group{
+                padding-top: 60px;
+            }
+            body{
+                background-image: url("{% static 'style/back3.jpg' %}");
+                background-size:150%;
+                background-position-x:10%;
+                background-position-y:40%;
+                background-attachment:fixed;
+                background-repeat: no-repeat;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                gap: 40px;
+            }
+
+            .from-group input .from-control{
+                background-color: black;
+            }
+            .form-group{
+                padding-top: 100px;
+            }
+            
+            input{
+                text-decoration: none;
+                color: black;
+            }
+        
+            
+        </style>
+    </head>
+    <body>
+        <form action="{% url 'register'%}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <center>
+            <div class="form-group">
+                {% csrf_token %}
+                {% if messages %}
+                {% for message in messages %}
+                {{message}}
+                <br> <hr>
+                {% endfor %}
+                {% endif %}
+                <table>
+                    {{form.as_table}}
+                </table>
+                <input type="submit" value="register" >
+                <a href="{% url 'index'%}"><input type="button" value="canncel" class="canncel"><br></a>
+            </div>
+            </center>
+        </form>
+
+    </body>
+</html>

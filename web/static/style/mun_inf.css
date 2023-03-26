@@ -1,0 +1,110 @@
+.alll{
+    display: grid;
+    grid-template-rows:auto auto ;
+
+}
+
+.mun_info{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+}
+
+.user_container{
+    padding: 20px;
+ 
+    
+}
+
+.user_container a{
+    text-decoration: none;
+}
+
+.mun_info .exten{
+    margin-left: 75px;
+}
+
+
+.mun_info .exten span {
+    margin: 10px;
+    padding: 10px;
+    float: left;
+    font-weight: 500;
+    font-size: medium;
+}
+
+.mun_info .exten span a {
+    color: black;
+}
+
+.mun_info .exten span:hover{
+    transform: scale(1.07);
+    transition: 0.2s;
+}
+
+.mun_info .exten span img{
+    width: 20px;
+    height: 20px;
+}
+
+.mun_info .exten .hide{
+    opacity: 1;
+    background-color: rgb(129, 224, 129);
+    float: right;
+    padding: 10px;
+    color: black;
+    font-weight: 500;
+    font-size: medium;
+    border-radius: 10px;
+}
+
+
+.mun_info .exten .hide.hidden{
+    opacity: 0;
+    transition: opacity 5s;
+
+}
+
+
+
+.decs{
+    width: 90%;
+    height: 100px;
+    border: solid;
+    border-color: #6C8FB5;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 0%;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #DDE2C6;
+    opacity: 100%;
+    color: rgb(0, 0, 0);
+}
+
+
+.decs:hover{
+    transition: 0.3s;        
+    transform: scale(1.03);
+    border-radius: 0%;
+}
+
+.decs .dec_titre{
+    font-size: 20px;
+    
+}
+
+
+a{
+    text-decoration: none;
+}
+
+.all .add_decribe{
+    padding: 20px;
+    padding-left:620px ;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}

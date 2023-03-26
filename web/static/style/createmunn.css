@@ -1,0 +1,67 @@
+.into{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0;
+    font-weight: 0;
+    margin: 60px;
+    gap: 50px;
+    margin-left: 230px;
+    padding: 50px;
+    padding-left: 180px;
+    background-color: rgb(159, 203, 203);
+    width: 50%;
+    border-radius: 20px;
+    
+
+}
+
+.into .btn{
+    padding: 6px;
+    margin: 10px;
+    width: 100px;
+}
+
+.into .name{
+    padding: 10px;
+    padding-right: 0px;
+    padding-left: 90px;
+    margin: 10px;
+    width: 220px;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-width:0pt;
+    font-weight: 800;
+    
+
+}
+
+.into .name:hover{
+    padding-left: 10px;
+    width: 300px;
+    transition: 2s;
+}
+
+.into .zone{
+    margin: 10px;
+    padding: 5px;
+    padding-left: 20px;
+    width: 150px;
+    font-weight: 600;
+    font-stretch:ultra-expanded;
+    border-radius: 10px;
+}
+
+
+.into .dec{
+    margin: 10px;
+    padding: 20px;
+    width: 500px;
+    border-radius: 10px;
+    border-width: 1pt;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.into .photo{
+    margin: 10px;
+}

@@ -1,0 +1,58 @@
+
+
+{% extends 'nav.html'%}
+
+    {% load static %}
+
+
+        {% block contain %}
+        <script src="{% static 'edits/jquery-3.6.3.min.js' %}" ></script>
+        <link rel="stylesheet" href="{% static 'style/mun_inf.css' %}">
+        <div class="alll">
+            <div class="mun_info">
+                    <h4>{{mun}}</h4>
+                <p class="decription" >
+                    {{mun.decrisption}}
+                </p>
+                {% if mun.pic %}
+                <img src="{{mun.pic.url}}">
+                {% endif %}
+
+                <div class="exten">
+                    <span class="static"><img src="{% static 'images/statistic.png'%}">  <a href="{% url 'munstatic' mun.slugy%} " >static</a></span>
+                    <span class="adec"><img src="{% static 'images/add.png'%}" alt="">  <a href="{% url 'add_decribe' mun.slugy%}" class="static">add your describe</a></span>
+                    
+                        {% if messages %}
+                        <span class="hide">
+                        {% for message in messages %}
+                        {{message}}
+                        {% endfor %}
+                        </span>
+                        {% endif %}
+
+                    
+                    
+                </div>
+            </div>
+
+            <div class="user_container">
+                {% if decs.count == 0 %}
+                <p class="empty">no describes yet</p>
+                {% else %}
+                {% for dec in decs %}
+                
+                <a href="{% url 'dec_info' dec.slugy%}">
+                    <div class="decs">
+                        <p class="dec_titre" >{{dec.titre}}</p>
+                        <p class="dec_describe" >{{dec.date}}</p>
+                    </div>
+                </a>
+                {% endfor %} 
+                {% endif %}
+            </div>
+            
+        </div>
+
+<script src="{% static 'edits/mun_info.js' %}" ></script>
+
+        {% endblock %}
